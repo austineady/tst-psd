@@ -300,6 +300,14 @@ form {
   @include shift(1);
   margin-top: 30px;
   margin-bottom: 0;
+  @include media(min-width 1200px) {
+    @include shift(2);
+    transition: 1s;
+  }
+  @include media(min-width 1300px) {
+    @include shift(2);
+    transition: 1s;
+  }
 }
 
 .option-box {
