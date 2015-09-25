@@ -10,12 +10,74 @@ $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
 $very-light-gray: #fafafa;
+$purple: #383a4c;
+$gold: #8f886c;
+$orange: #e69f76;
 
 $base-font-color: $dark-gray;
 $base-background-color: $very-light-gray;
 
 body {
+  @include outer-container(1500px);
   font-family: $base-font-family;
   background-color: $base-background-color;
   color: $base-font-color;
+  margin: 0;
+  padding: 0;
+}
+
+.gold {
+  color: $gold;
+}
+
+.white {
+  background-color: white;
+  color: white;
+}
+
+.purple {
+  background-color: $purple;
+  color: $purple;
+}
+
+.container {
+  @include span-columns(12);
+}
+
+.top-header {
+  height: 74px;
+}
+
+.first-section {
+  height: 445px;
+}
+
+.second-section {
+  height: 360px;
+}
+
+.third-section {
+  height: 312px;
+}
+
+.fourth-section {
+  height: 450px;
+}
+
+.fifth-section {
+  height: 370px;
+}
+
+.left-box {
+  @include span-columns(6);
+  @include omega();
+  float: left;
+  border: 1px solid red;
+}
+
+.right-box {
+  @include span-columns(6);
+  @include omega();
+  float: left;
+  border: 1px solid red;
 }
