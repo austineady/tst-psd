@@ -69,7 +69,7 @@ form {
   // text-align: left;
   padding: 5px;
   @include media(max-width 450px) {
-    @include span-columns(12);
+    // @include span-columns(12);
     margin-left: 0;
     text-align: center;
   }
@@ -124,7 +124,6 @@ form {
 }
 
 .white {
-  background-color: white;
   color: white;
 }
 
@@ -139,30 +138,8 @@ form {
 
 .container {
   margin: 0 auto;
-  min-width: 400px;
-  max-width: 1300px;
+  max-width: 1200px;
   height: auto;
-  // @include media(min-width 1300px) {
-  //   @include shift(2);
-  //   transition: 1s;
-  // }
-  // @include media(min-width 1400px) {
-  //   @include shift(2.5);
-  //   transition: 1s;
-  // }
-  // @include media(min-width 1500px) {
-  //   @include shift(3);
-  //   transition: 1s;
-  // }
-  // @include media(min-width 1600px) {
-  //   @include shift(3.5);
-  //   transition: 1s;
-  // }
-  // @include media(max-width 800px) {
-  //   @include span-columns(12);
-  //   @include shift(0);
-  //   transition: 1s;
-  // }
 }
 
 .top-header {
@@ -175,6 +152,8 @@ form {
   min-height: 650px;
   padding-top: 10px;
   @include media(max-width 450px) {
+    width: 100%;
+    margin: 0 auto;
     padding-bottom: 15px;
     transition: 1s;
   }
@@ -183,26 +162,14 @@ form {
 .second-section {
   min-height: 600px;
 }
-//
-// .third-section {
-//   min-height: 312px;
-// }
-//
-// .fourth-section {
-//   min-height: 450px;
-// }
-//
-// .fifth-section {
-//   min-height: 370px;
-// }
 
 .left-box {
-  @include span-columns(3);
-  @include shift(3);
-  @include omega();
+  width: 370px;
   float: left;
   @include media(max-width 450px) {
     @include span-columns(12);
+    width: 100%;
+    margin: 0 auto;
     float: none;
     transition: 1s;
     @include shift(0);
@@ -211,14 +178,14 @@ form {
 }
 
 .right-box {
-  @include span-columns(3);
-  @include omega();
+  width: 370px;
   float: left;
-  @include media(max-width 870px) {
-    min-width: 350px;
-  }
+  // @include media(max-width 870px) {
+  //   min-width: 350px;
+  // }
   @include media(max-width 450px) {
-    @include span-columns(10);
+    width: 100%;
+    margin: 0 auto;
     float: none;
     transition: 1s;
     @include shift(2);
@@ -232,10 +199,10 @@ form {
 
 .first-left {
   @include span-columns(5);
-  @include omega();
+  @include shift(1);
+  // @include omega();
   margin-right: 30px;
   min-width: 230px;
-  max-width: 350px;
   transition: 1s;
   text-align: center;
   @include media(max-width 450px) {
@@ -291,10 +258,9 @@ form {
 }
 
 .first-right {
-  @include span-columns(5);
-  @include omega();
+  // @include span-columns(5);
+  // @include omega();
   padding: 5px;
-  max-width: 350px;
   @include media(max-width 870px) {
     min-width: 350px;
     margin-top: 300px;
@@ -327,6 +293,10 @@ form {
 }
 
 .second-section {
+  @include media(max-width 450px) {
+    width: 100%;
+    margin: 0 auto;
+  }
   text-align: center;
 }
 
@@ -354,21 +324,14 @@ form {
 }
 
 .option-container {
-  @include span-columns(11);
-  @include shift(.5);
   min-height: 450px;
   margin-top: 30px;
   margin-bottom: 0;
   transition: 1s;
   @include media(max-width 1275px) {
     min-height: 700px;
-  }
-  @include media(max-width 450px) {
-    @include shift(.5);
-  }
-  @include media(min-width 1300px) {
-    @include shift(1);
-    transition: 1s;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -413,6 +376,10 @@ form {
   min-height: 370px;
   padding-top: 20px;
   text-align: center;
+  @include media(max-width 450px) {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .third-title {
@@ -437,8 +404,6 @@ form {
   font-size: 22px;
   margin-bottom: 35px;
   @include media(max-width 450px) {
-    @include span-columns(11.8);
-    @include shift(.1);
     transition: 1s;
   }
 }
@@ -447,6 +412,10 @@ form {
   @include span-columns(11);
   @include shift(.5);
   text-align: center;
+  @include media(max-width 450px) {
+    @include shift(0);
+    width: auto;
+  }
 }
 
 .third-item {
@@ -462,21 +431,25 @@ form {
 }
 
 .third-small {
-  @include span-columns(6);
-  @include shift(3);
+  @include span-columns(11);
+  @include shift(.5);
   color: white;
   font-style: italic;
   font-size: 14px;
   font-weight: 100;
   margin-bottom: 5px;
   @include media(max-width 450px) {
-    @include span-columns(11.8);
-    @include shift(.1);
+    @include span-columns(12);
+    @include shift(0);
   }
 }
 
 .fourth-section {
   min-height: 530px;
+  @include media(max-width 450px) {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .fourth-left {
@@ -485,9 +458,10 @@ form {
   min-width: 300px;
   padding-top: 5px;
   @include media(max-width 450px) {
-    @include span-columns(10);
-    @include shift(1);
+    // @include span-columns(10);
+    // @include shift(1);
     padding-top: 50px;
+    // min-width: 400px;
     transition: 1s;
     text-align: center;
   }
@@ -504,16 +478,19 @@ form {
   text-align: left;
   color: black;
   font-size: 24px;
+  @include media(max-width 450px) {
+    text-align: center;
+  }
 }
 
 .fourth-right {
-  @include span-columns(4);
+  @include span-columns(5);
   min-width: 400px;
   text-align: center;
   margin-top: 40px;
   @include media(max-width 450px) {
-    @include span-columns(10);
-    @include shift(.3);
+    width: 100%;
+    margin: 0 auto;
     transition: 1s;
     margin-top: -90px;
     margin-bottom: 30px;
@@ -525,15 +502,16 @@ form {
   min-width: 280px;
   @include media(max-width 450px) {
     height: 450px;
-    @include shift(-1);
   }
 }
 
 .fifth-section {
-  position: relative;
   min-height: 560px;
   @include media(max-width 450px) {
     height: 1050px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
@@ -544,16 +522,20 @@ form {
   font-size: 24px;
   font-weight: 100;
   @include media(max-width 450px) {
-    @include span-columns(10);
-    @include shift(1);
+    width: 100%;
+    margin: 0 auto;
+    // @include span-columns(10);
+    // @include shift(1);
     transition: 1s;
   }
 }
 
 .fifth-right {
   @include media(max-width 450px) {
-    @include span-columns(10);
-    @include shift(1.8);
+    width: 100%;
+    margin: 0 auto;
+    // @include span-columns(10);
+    // @include shift(1.8);
     margin-top: -30px;
     transition: 1s;
   }
@@ -564,7 +546,7 @@ form {
   @include media(max-width 450px) {
     text-align: center;
     transition: 1s;
-    margin-bottom: 0;
+    margin-bottom: 40px;
   }
 }
 
@@ -580,7 +562,7 @@ form {
   min-width: 200px;
   height: 60px;
   @include media(max-width 450px) {
-    @include shift(4.5);
+    @include shift(0);
     margin-bottom: 10px;
     margin-top: 10px;
     transition: 1s;
@@ -588,30 +570,21 @@ form {
 }
 
 .fifth-form {
-  width: 310px;
-  @include media(max-width 450px) {
-    @include span-columns(11);
-    @include shift(.5);
-    margin-left: -20px;
-  }
+  margin-top: 20px;
 }
 
 .fifth-image {
+  @include span-columns(2);
+  @include shift(5);
+  min-width: 200px;
   height: 100px;
-  width: 200px;
-  @include media(max-width 450px) {
-    @include shift(-3.3);
-  }
+  margin-top: 30px;
 }
 
 .fifth-copyright {
-  position: absolute;
-  bottom: 5px;
-  left: 15px;
   width: 32px;
   height: 32px;
   @include media(max-width 450px) {
-    margin: 0 auto;
   }
 }
 
@@ -623,8 +596,6 @@ form {
   margin-top: 60px;
   margin-bottom: 10px;
   @include media(max-width 450px) {
-    @include span-columns(11);
-    @include shift(.5);
     margin-top: 100px;
   }
 }
