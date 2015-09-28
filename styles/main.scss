@@ -233,6 +233,7 @@ form {
 .first-left {
   @include span-columns(5);
   @include omega();
+  margin-right: 30px;
   min-width: 230px;
   max-width: 350px;
   transition: 1s;
