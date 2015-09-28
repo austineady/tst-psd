@@ -99,7 +99,7 @@ form {
   margin-top: 10px;
   margin-left: 50px;
   @include media(max-width 450px) {
-    @include shift();
+    @include shift(1);
     margin-left: 0;
   }
   transition: 1s;
@@ -133,8 +133,14 @@ form {
   color: $purple;
 }
 
-.container {
+.background {
   @include span-columns(12);
+}
+
+.container {
+  margin: 0 auto;
+  min-width: 400px;
+  max-width: 1300px;
   height: auto;
   // @include media(min-width 1300px) {
   //   @include shift(2);
@@ -206,7 +212,6 @@ form {
 
 .right-box {
   @include span-columns(3);
-  @include shift(1);
   @include omega();
   float: left;
   @include media(max-width 870px) {
@@ -227,21 +232,11 @@ form {
 
 .first-left {
   @include span-columns(5);
-  @include shift(1);
   @include omega();
   min-width: 230px;
   max-width: 350px;
   transition: 1s;
   text-align: center;
-  @include media(min-width 1000px) {
-    @include shift(1.5);
-  }
-  @include media(min-width 1100px) {
-    @include shift(2);
-  }
-  @include media(min-width 1200px) {
-    @include shift(2.5);
-  }
   @include media(max-width 450px) {
     @include span-columns(8);
     @include shift(2);
@@ -536,6 +531,9 @@ form {
 .fifth-section {
   position: relative;
   min-height: 560px;
+  @include media(max-width 450px) {
+    height: 1050px;
+  }
 }
 
 .fifth-left {
@@ -607,13 +605,12 @@ form {
 
 .fifth-copyright {
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   left: 15px;
   width: 32px;
   height: 32px;
   @include media(max-width 450px) {
-    bottom: 30px;
-    left: 185px;
+    margin: 0 auto;
   }
 }
 
