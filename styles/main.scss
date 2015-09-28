@@ -32,14 +32,14 @@ body {
   background-color: #25282b;
 }
 
+img {
+  max-width: 100%;
+}
+
 .slanted {
   font-family: 'Playfair Display', serif;
   font-weight: 300;
   font-style: italic;
-}
-
-hr {
-  border-color: $orange;
 }
 
 a {
@@ -67,12 +67,24 @@ form {
   margin-left: 30px;
   // text-align: left;
   padding: 5px;
+  @include media(max-width 450px) {
+    @include span-columns(12);
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+.white-bar {
+  border-color: white;
 }
 
 .form-head {
   text-align: left;
   text-transform: uppercase;
   font-size: 11px;
+  @include media(max-width 450px) {
+    text-align: center;
+  }
 }
 
 .form-submit {
@@ -85,6 +97,17 @@ form {
   text-align: center;
   margin-top: 10px;
   margin-left: 50px;
+  @include media(max-width 450px) {
+    @include shift();
+    margin-left: 0;
+  }
+  transition: 1s;
+}
+
+.form-submit:hover {
+  background-color: white;
+  color: $purple;
+  transition: 1s;
 }
 
 .black {
@@ -261,13 +284,15 @@ form {
 
 .first-right-title {
   margin-top: 10px;
+  margin-bottom: 2px;
   text-transform: uppercase;
   text-align: left;
 }
 
 .first-right-text {
-  font-size: 13px;
+  font-size: 14px;
   color: white;
+  font-weight: 100;
 }
 
 .second-section {
@@ -284,6 +309,7 @@ form {
   margin-top: 0;
   text-transform: uppercase;
   color: $gold;
+  margin-bottom: 5px;
 }
 
 .option-bold {
@@ -326,8 +352,9 @@ form {
 }
 
 .option-image {
-  width: 160px;
-  height: 110px;
+  width: 240px;
+  height: 121px;
+  margin-top: 0;
 }
 
 .second-text {
@@ -444,7 +471,7 @@ form {
 
 .fourth-image {
   height: 330px;
-  width: 235px;
+  min-width: 235px;
 }
 
 .fifth-section {
