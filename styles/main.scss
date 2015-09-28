@@ -579,6 +579,12 @@ form {
   min-width: 200px;
   height: 100px;
   margin-top: 30px;
+  @include media(max-width 450px) {
+    @include shift(0);
+    width: 200px;
+    height: 100px;
+    margin-top: 30px;
+  }
 }
 
 .fifth-copyright {
